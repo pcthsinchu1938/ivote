@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>電子投票系統</title>
+    <!-- --- ▼▼▼ MODIFICATION START: 更新網頁標題 ▼▼▼ --- -->
+    <title>台灣基督長老教會數位選舉系統</title>
+    <!-- --- ▲▲▲ MODIFICATION END ▲▲▲ --- -->
     <style>
         :root {
             --primary-green: #28a745; --light-green: #d4edda; --dark-green: #155724;
@@ -108,7 +110,9 @@
 <body>
     <div class="container" id="main-container">
         <div id="home-view">
-            <h1>電子投票系統</h1>
+            <!-- --- ▼▼▼ MODIFICATION START: 更新網頁主標題 ▼▼▼ --- -->
+            <h1>台灣基督長老教會<br>數位選舉系統</h1>
+            <!-- --- ▲▲▲ MODIFICATION END ▲▲▲ --- -->
             <div class="form-group">
                 <label for="key-input">請輸入8位數投票金鑰</label>
                 <input type="tel" id="key-input" pattern="[0-9]*" maxlength="8" inputmode="numeric" autocomplete="off" autocomplete="new-password">
@@ -166,7 +170,7 @@
     </div>
 
     <script>
-        const API_URL = "https://script.google.com/macros/s/AKfycbxpXJA3PPykEKUXU_LZTVmxx_rVS2rf5RMkg3YuobcpbzBgz7Iq60TnN8nAfjr6DYfc/exec"; 
+        const API_URL = "https://script.google.com/macros/s/AKfycbx90HCsgS6lLzwuHiK4LEXeQxgOubA5EhFRjL_0J8P_-3Njx9qk9e6_hnc9aQsYzhJp/exec"; 
         
         const homeView = document.getElementById('home-view');
         const voteView = document.getElementById('vote-view');
@@ -229,7 +233,6 @@
             closeCandidateSelector();
         }
 
-        // --- ▼▼▼ MODIFICATION START: 搜尋事件改用 'input'，並增加收起鍵盤的邏輯 ▼▼▼ ---
         candidateSearchInput.addEventListener('input', () => {
             const filter = candidateSearchInput.value.toLowerCase();
             const items = candidateList.querySelectorAll('div');
@@ -249,7 +252,6 @@
             e.preventDefault();
             candidateSearchInput.blur();
         });
-        // --- ▲▲▲ MODIFICATION END ▲▲▲ ---
 
         function fillKeyFromUrl() {
             if (keyInput.value) return;
